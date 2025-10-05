@@ -1,0 +1,19 @@
+环境配置：
+运行前，请确保已安装所有必要的Python库。
+
+WebDriver：
+爬虫依赖于Selenium和对应的浏览器驱动（如ChromeDriver）。请根据代码内的注释，配置正确的驱动路径，填入正确的chromedriver.exe路径。其他浏览器也可以，请自行修改配置。
+
+凭证配置：
+百度指数和微博爬虫需要用户凭证。请根据以下指南配置。
+百度指数： 打开 get_baidu_index.py，在顶部的 CREDENTIALS 字典中填入您的 BDUSS 和 Cipher-Text。
+微博： 首次运行 get_weibo.py 前，请删除 cookies.txt 文件，程序将引导您通过扫码登录来自动生成。或者先运行get cookie to txt文件。请注意，要保证生成的cookies.txt文件与get weibo在同一个目录下。
+
+如何运行每个爬虫：
+百度指数爬虫： python get_baidu_index.py，然后根据提示输入关键词和日期。
+微博爬虫： python get_weibo.py，首次运行需要登录，然后根据提示操作。
+咸鱼爬虫：根据提示填入关键词。如果咸鱼的搜索、翻页等按键位置有变化，请在网页的element中获取新位置，填入代码中更新程序。
+微信公众号：根据提示填入关键词。
+
+
+产出示例：压缩包里的四个csv文件是爬取百度指数、微博、微信公众号和咸鱼的结果示例。
